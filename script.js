@@ -14,7 +14,7 @@ document.getElementById('absence-form').addEventListener('submit', function(even
     const exitTime = new Date(localStorage.getItem('exitTime'));
 
     if (exitTime) {
-      const durationMinutes = Math.floor((timestamp - exitTime) / 60000);
+      const durationMinutes = Math.ceil((timestamp - exitTime) / 60000);
       resultMessage = `
         <h2>تصريح الرجوع</h2>
         <p><strong>اسم الطالبة:</strong> ${studentName}</p>
